@@ -1,6 +1,6 @@
 # 🐦 Twitter MCP Agent
 
-> An open-source MCP server to automate Twitter/X using Claude AI
+> An open-source MCP server to automate Twitter/X using any LLM
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-ES%20Modules-green.svg)
@@ -11,12 +11,12 @@
 
 ## 📖 What is Twitter MCP Agent?
 
-**Twitter MCP Agent** is a fully open-source [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that lets **Claude AI automate your Twitter/X account**. Simply describe what you want to tweet, and Claude handles the rest.
+**Twitter MCP Agent** is a fully open-source [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that lets **any LLM automate your Twitter/X account**. Simply describe what you want to tweet, and the LLM handles the rest.
 
 ```
-You (prompt Claude)
+You (prompt your LLM)
        ↓
-    Claude
+    LLM
        ↓ calls a tool
   [post_tweet tool]
        ↓
@@ -33,7 +33,7 @@ Built with **Node.js (ES Modules)** and the official MCP SDK — lightweight, ex
 
 ## ✨ Features
 
-- ✅ Post tweets directly through Claude AI
+- ✅ Post tweets directly through your LLM
 - 🕐 Schedule tweets for future publishing
 - 💬 Auto-reply to mentions and threads
 - 🔍 Search and retweet relevant content
