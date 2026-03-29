@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import { TwitterApi } from "twitter-api-v2";
 
-dotenv.config();
+dotenv.config({ path: new URL("../.env", import.meta.url) });
 
 const {
   X_API_KEY,

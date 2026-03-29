@@ -1,0 +1,5 @@
+node src/index.js post --text "Hello"
+node src/index.js generate --topic "AI agents" --tone "friendly" --style "short"
+node src/index.js schedule --text "Hello later" --at "2026-03-27T22:00:00+05:30"
+node src/index.js schedule-ai --topic "AI" --tone "friendly" --style "short" --at "2026-03-27T22:00:00+05:30"
+node src/index.js worker

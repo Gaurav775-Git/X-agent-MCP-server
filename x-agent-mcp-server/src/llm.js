@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 
-dotenv.config();
+dotenv.config({ path: new URL("../.env", import.meta.url) });
 
 const apiKey = process.env.OPENROUTER_API_KEY;
 const baseUrl = process.env.OPENROUTER_BASE_URL || "https://openrouter.ai/api/v1";

@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import { MongoClient, ObjectId } from "mongodb";
 
-dotenv.config();
+dotenv.config({ path: new URL("../.env", import.meta.url) });
 
 const uri = process.env.MONGO_URI;
 const dbName = process.env.MONGO_DB || "x_agent";
@@ -62,4 +62,13 @@ export async function markFailed(id, error) {
     { _id: new ObjectId(id) },
     { $set: { status: "failed", error, failedAt: new Date() } }
   );
+}
+
+export async function listQueue(limit = 20) {
+  const collection = await initDb();
+  return collection
+    .find({})
+    .sort({ createdAt: -1 })
+    .limit(limit)
+    .toArray();
 }
